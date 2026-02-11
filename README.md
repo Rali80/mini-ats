@@ -1,36 +1,218 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+🚀 Mini-ATS
 
-## Getting Started
+Mini-ATS is a modern, full-stack Applicant Tracking System (ATS) built with Next.js 16, React 19, and Supabase.
 
-First, run the development server:
+It helps companies manage the entire recruitment process — from job posting to hiring — in one intuitive and real-time platform.
 
-```bash
+👉 Live Demo:
+https://mini-ats-fpny.vercel.app/
+
+Login: admin@ats.com / Test123
+
+✨ Features
+🎯 Core Features
+Feature	Description
+Job Management	Create, edit, and publish job listings
+Candidate Management	Add, filter, and manage candidates
+Interview Scheduling	Schedule interviews with automatic meeting links
+Kanban Board	Visual recruitment pipeline
+Notifications	Real-time activity updates
+Search	Advanced search across jobs and candidates
+RBAC	Role-based access control (Admin/Customer)
+🏗️ Tech Stack
+Frontend   → Next.js 16 + React 19 + TypeScript
+Styling    → Tailwind CSS 4 + CSS Modules
+Backend    → Next.js API Routes + Supabase
+Database   → PostgreSQL (Supabase)
+Auth       → Supabase Auth (JWT)
+Realtime   → Supabase Realtime
+Storage    → Supabase Storage
+Testing    → Vitest + Playwright
+Deployment → Vercel
+
+📁 Project Structure
+mini-ats/
+├── app/                    # Next.js App Router
+│   ├── (pages)            # Application pages
+│   ├── api/               # API routes
+│   └── layout.tsx
+├── components/            # React components
+│   ├── ui/               # UI kit (Button, Card, Input)
+│   └── (features)        # Feature components
+├── lib/                   # Utilities & services
+│   ├── auth/             # Authentication logic
+│   ├── supabase/         # Supabase clients
+│   └── services/
+├── types/                 # TypeScript types
+├── e2e/                   # End-to-end tests
+└── README.md
+
+📊 Detailed Functionality
+📊 Dashboard
+
+Overview statistics (jobs, candidates, hires)
+
+Upcoming interviews
+
+Latest applications
+
+Quick action shortcuts
+
+💼 Job Management
+
+Create and edit job postings
+
+Link candidates to jobs
+
+Open/Closed status management
+
+👥 Candidate Management
+
+Full candidate profiles
+
+Ratings & notes
+
+Pipeline stages:
+
+Applied → Screening → Interview → Offer → Hired
+
+
+CV & file uploads
+
+📅 Interview Scheduling
+
+Date & time scheduling
+
+Automatic Google Meet links
+
+Interview type (video/phone/on-site)
+
+Reminders & notifications
+
+🎯 Kanban Board
+
+Drag & drop pipeline
+
+Real-time updates
+
+Filtering & searching
+
+🔐 Security
+
+Mini-ATS is designed with security first.
+
+JWT authentication (Supabase Auth)
+
+Role-Based Access Control (RBAC)
+
+Row Level Security (RLS)
+
+Secure file uploads
+
+Built-in CSRF protection (Next.js)
+
+Roles
+Role	Access
+admin	Full system access
+customer	Own data only
+🗄️ Database Design
+Main Tables
+Table	Purpose
+profiles	Users & roles
+jobs	Job listings
+candidates	Candidate data
+interviews	Interview schedules
+notifications	User notifications
+applications	Candidate ↔ job relation
+Relationships
+profiles (1) ───< jobs
+profiles (1) ───< candidates
+jobs (1) ───< candidates
+candidates (1) ───< interviews
+profiles (1) ───< notifications
+
+🧪 Testing
+Strategy
+
+Unit tests → Vitest
+
+End-to-End tests → Playwright
+
+Tested Areas
+
+UI components (Button, Card, Input)
+
+Hooks (useAuth)
+
+RBAC
+
+Navigation & landing page
+
+Run tests
+npm run test
+npm run test:e2e
+
+⚙️ Local Development
+1. Clone the repository
+git clone https://github.com/Rali80/mini-ats.git
+cd mini-ats
+
+2. Install dependencies
+npm install
+
+3. Add environment variables (.env.local)
+NEXT_PUBLIC_SUPABASE_URL=https://tbargiaqsxmifprkmmzq.supabase.co
+NEXT_PUBLIC_SUPABASE_ANON_KEY=sb_publishable_VHgpMEkf7hEwx8i_RSthSA_oWoglYSs
+
+4. Start development server
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+App runs at:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+http://localhost:3000
 
-## Learn More
+🚀 Deployment
 
-To learn more about Next.js, take a look at the following resources:
+Mini-ATS is deployed automatically via Vercel + GitHub.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Every push to master triggers a new production build:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+git add .
+git commit -m "update"
+git push origin master
+https://mini-ats-fpny.vercel.app/
+🔮 Roadmap
 
-## Deploy on Vercel
+Planned features:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+AI-based candidate matching
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Automatic CV parsing
+
+LinkedIn integration
+
+Email automation & templates
+
+Advanced analytics & reporting
+
+Mobile app (React Native)
+
+Multi-tenant support for agencies
+
+🎯 Why Mini-ATS?
+
+✅ Modern stack
+✅ Secure architecture
+✅ Real-time updates
+✅ Responsive UI
+✅ Fully tested
+✅ Open source & extensible
+
+📜 License
+
+MIT License
+
+👨‍💻 Author
+
+Built by Rali80
