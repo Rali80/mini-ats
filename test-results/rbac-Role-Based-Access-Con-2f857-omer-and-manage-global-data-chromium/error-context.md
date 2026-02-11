@@ -1,0 +1,99 @@
+# Page snapshot
+
+```yaml
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - link "M Mini ATS" [ref=e5] [cursor=pointer]:
+        - /url: /
+        - generic [ref=e7]: M
+        - generic [ref=e8]: Mini ATS
+      - generic [ref=e9]:
+        - generic [ref=e10]:
+          - img [ref=e11]
+          - text: Admin
+        - button [ref=e13]:
+          - img [ref=e14]
+        - button "A" [ref=e18]:
+          - generic [ref=e19]: A
+    - generic [ref=e20]:
+      - navigation [ref=e23]:
+        - link "Dashboard" [ref=e24] [cursor=pointer]:
+          - /url: /dashboard
+          - img [ref=e25]
+          - text: Dashboard
+        - link "Jobs" [ref=e30] [cursor=pointer]:
+          - /url: /jobs
+          - img [ref=e31]
+          - text: Jobs
+        - link "Candidates" [ref=e34] [cursor=pointer]:
+          - /url: /candidates
+          - img [ref=e35]
+          - text: Candidates
+        - link "Kanban Board" [ref=e40] [cursor=pointer]:
+          - /url: /board
+          - img [ref=e41]
+          - text: Kanban Board
+        - link "Admin" [ref=e42] [cursor=pointer]:
+          - /url: /admin
+          - img [ref=e43]
+          - text: Admin
+      - main [ref=e46]:
+        - generic [ref=e48]:
+          - generic [ref=e49]:
+            - generic [ref=e50]:
+              - heading "System Administration" [level=1] [ref=e51]
+              - paragraph [ref=e52]: Global management of users, roles, and platform data.
+            - generic [ref=e53]:
+              - img [ref=e54]
+              - text: Superadmin Access
+          - generic [ref=e56]:
+            - generic [ref=e57]:
+              - generic [ref=e58]:
+                - generic [ref=e59]:
+                  - heading "Register New User" [level=3] [ref=e60]
+                  - paragraph [ref=e61]: Admins can create both Customer and Admin accounts.
+                - generic [ref=e63]:
+                  - generic [ref=e64]: Missing Supabase Service Role configuration
+                  - generic [ref=e65]:
+                    - text: Identity (Email)
+                    - textbox "user@example.com" [ref=e66]: customer_1770661682986@test.com
+                  - generic [ref=e67]:
+                    - text: Access Level (Role)
+                    - combobox [ref=e68]:
+                      - option "Customer (Hiring Manager)" [selected]
+                      - option "System Admin"
+                  - generic [ref=e69]:
+                    - text: Initial Password
+                    - textbox "············" [ref=e70]: cust123456
+                  - button "Create Account" [ref=e71]:
+                    - img [ref=e72]
+                    - text: Create Account
+              - generic [ref=e73]:
+                - generic [ref=e75]:
+                  - generic [ref=e76]: "0"
+                  - generic [ref=e77]: Active Customers
+                - generic [ref=e79]:
+                  - generic [ref=e80]: "1"
+                  - generic [ref=e81]: Admin Accounts
+            - generic [ref=e83]:
+              - generic [ref=e85]:
+                - heading "All Users" [level=3] [ref=e86]:
+                  - img [ref=e87]
+                  - text: All Users
+                - paragraph [ref=e92]: Overview of all people in the system.
+              - generic [ref=e95]:
+                - generic [ref=e96]:
+                  - generic [ref=e97]: A
+                  - generic [ref=e98]:
+                    - generic [ref=e99]:
+                      - text: admin@ats.com
+                      - generic [ref=e100]: Admin
+                    - generic [ref=e101]: "ID: 7b6882d8..."
+                - generic [ref=e102]:
+                  - generic [ref=e103]: Created At
+                  - generic [ref=e104]: 2/9/2026
+  - button "Open Next.js Dev Tools" [ref=e110] [cursor=pointer]:
+    - img [ref=e111]
+  - alert [ref=e114]
+```
